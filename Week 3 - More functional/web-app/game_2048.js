@@ -86,6 +86,18 @@ const strip_zeros = (row) => row.filter((x) => x !== 0);
 // combine_tiles([3], [1, 3])
 // [1, 3, 3]
 
+var newBoard = [
+    [],
+    [],
+    [],
+    []
+];
+
+const new_board = function () {
+    return newBoard;
+};
+
+
 const combine_tiles = function (row, new_row = []) {
     if (row.length === 0) {
         return new_row;
