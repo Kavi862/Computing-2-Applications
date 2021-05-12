@@ -7,6 +7,7 @@ const game_2048 = Object.create(null);
 //     [0, 2, 2, 3]
 // ];
 
+
 // [1, 1, 2, 2]
 // [1, 1, 2, 2] // strip_zeros
 // [2, 3] // combine_tiles
