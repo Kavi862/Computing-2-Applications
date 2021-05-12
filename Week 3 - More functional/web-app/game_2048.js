@@ -142,7 +142,7 @@ game_2048.right = compose(h_flip, game_2048.left, h_flip);
 
 game_2048.up = compose(transpose, game_2048.left, transpose);
 
-game_2048.up = (board) => transpose(game_2048.left(transpose(board)));
+game_2048.down = compose(transpose, game_2048.right, transpose);
 
 game_2048.down = (board) => transpose(game_2048.right(transpose(board)));
 game_2048.down = compose(transpose, game_2048.right, transpose);
