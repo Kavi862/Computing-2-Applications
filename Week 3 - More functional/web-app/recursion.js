@@ -58,4 +58,30 @@ const lucas = function (l) {
 };
 
 
+// Brady sequence
+const brady = function (a, b, num) {
+    if (a === 2308 && b === 4261) {
+        return fibLike(num);
+    }
+    if (a === 0 && b === 1) {
+        return fib(num);
+    }
+    if (a === 2 && b === 1) {
+        return lucas(num);
+    }
+};
+
+const fibLike = function (n) {
+    if (n === 0) {
+        return 2308;
+    }
+    if (n === 1) {
+        return 4261;
+    } else {
+        return fibLike(n - 2) + fibLike(n - 1);
+    }
+};
+
+
+
 debugger;
