@@ -1,5 +1,5 @@
 import game_2048 from "./game_2048.js";
-const {left, right, up, down} = game_2048;
+const {left, right, up, down, new_board} = game_2048;
 
 const print_boards = function (b1, b2) {
     const string_rows_1 = b1.map(String);
@@ -21,3 +21,5 @@ const board = [
 ];
 
 print_boards(board, down(board));
+// new_board();
+
