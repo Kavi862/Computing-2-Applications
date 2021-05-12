@@ -32,7 +32,7 @@ const fibonacci = function (x, y) {
 };
 
 
-// Another Fibonacci sequence
+// Another Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8, 13, 21
 const fib = function (n) {
     if (n === 0) {
         return 0;
@@ -43,5 +43,19 @@ const fib = function (n) {
         return fib(n - 2) + fib(n - 1);
     }
 };
+
+
+// Lucas sequence: 2, 1, 3, 4, 7, 11, 18, 29
+const lucas = function (l) {
+    if (l === 0) {
+        return 2;
+    }
+    if (l === 1) {
+        return 1;
+    } else {
+        return (lucas(l - 2) + lucas(l - 1));
+    }
+};
+
 
 debugger;
