@@ -147,6 +147,10 @@ const row_left = pipe(
     pad_zeros
 );
 
+const multi2 = (row) => row.map(function (element) {
+    return element * 2;
+});
+
 game_2048.left = (board) => board.map(row_left);
 
 // game_2048.right = (board) => h_flip(game_2048.left(h_flip(board)));
@@ -158,12 +162,26 @@ game_2048.down = compose(transpose, game_2048.right, transpose);
 
 game_2048.down = (board) => transpose(game_2048.right(transpose(board)));
 game_2048.down = compose(transpose, game_2048.right, transpose);
+
+game_2048.score = (row) => (row * 2);
+
 export default Object.freeze(game_2048);
 
 
-game_2048.up([
-    [1, 1, 2, 2],
-    [1, 0, 0, 1],
-    [0, 0, 1, 1],
-    [0, 2, 2, 3]
-]);
+
+    // [1, 1, 2, 2],
+    // [1, 0, 0, 1],
+    // [0, 0, 1, 1],
+    // [0, 2, 2, 3]
+
+//      [2, 2, 4, 4],
+//      [2, 0, 0, 2],
+//      [0, 0, 2, 2],
+//      [0, 4, 4, 6]
+
+//      [12],
+//      [4],
+//      [4],
+//      [14]
+
+debugger;
